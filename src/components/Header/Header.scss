@@ -1,0 +1,113 @@
+@import "../../assets/scss/utils/_module";
+
+header {
+  position: fixed;
+  top: 0;
+  left: em(306);
+  right: 0;
+  background: #FFFFFF;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0 20px 0 0;
+  z-index: 1;
+}
+
+.header-nav {
+  padding: em(30) em(55) em(36) em(55);
+  a {
+    position: relative;
+    will-change: color, font-weight;
+    transition: color, font-weight 0.25s;
+    @include font(16, 1.3125, #42474A, 400, 0, $segoiUI);
+
+    &.active {
+      color: #713BDB;
+      font-weight: 600;
+
+      &:after {
+        background-color: #713BDB;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: em(-4);
+      transform: translateX(-50%);
+      background-color: transparent;
+      width: em(16);
+      height: em(2);
+      border-radius: 2px;
+      will-change: background-color;
+      transition: background-color 0.25s;
+    }
+    &:hover {
+      color: #713BDB;
+    }
+  }
+  ul {
+    column-gap: em(34);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+#burger-wrapper {
+  width: em(80);
+  height: em(80);
+  background-color: $blackColor;
+  justify-content: center;
+  align-items: center;
+  @extend %flexBox, %userCursor;
+
+  &.close {
+    background-color: $whiteColor;
+  }
+}
+
+#burger {
+  position: relative;
+  width: em(32);
+  height: em(32);
+}
+
+#burger div,
+#burger div:before,
+#burger div:after {
+  background: $whiteColor;
+  height: 1px;
+  width: em(32);
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  will-change: all;
+  transition: all 0.3s $easing;
+}
+
+#burger div {
+  top: em(13);
+
+  &:before {
+    content: "";
+    top: em(-9);
+    width: em(32)
+  }
+  &:after {
+    content: "";
+    top: em(9);
+  }
+}
+
+#burger-wrapper.close div {
+  transform: rotate(-22deg);
+
+  &:before {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  &:after {
+    opacity: 0;
+    width: 0;
+    transform: rotate(90deg);
+  }
+}

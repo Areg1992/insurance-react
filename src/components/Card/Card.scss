@@ -1,0 +1,60 @@
+@import "../../assets/scss/utils/_module";
+
+.card {
+  display: block;
+  position: relative;
+  margin-bottom: em(82);
+  background: $whiteColor;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.06);
+  padding: em(26) em(26) em(26) em(26);
+
+  &-text {
+
+    p {
+      margin: 0;
+      @include font(17, 1.3125, #42474A, 400, 0, $segoiUI);
+    }
+  }
+}
+
+.price {
+  @include font(55, 1.3125, #42474A, 400, 0, $segoiUI);
+
+  sup {
+    color: #713BDB;
+  }
+}
+
+
+.progress-wrapper {
+  margin-top: em(48);
+}
+
+.progress {
+  height: em(5);
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ECECEC 0%, #F2F1F1 111.47%);
+
+  div {
+    height: 100%;
+  }
+  &-green {
+
+    div {
+      background: linear-gradient(90deg, #33D69F 0%, #50EDB8 111.47%);
+    }
+  }
+  &-purple {
+    div {
+      background: linear-gradient(90deg, #713BDB 0%, #A886E9 111.47%);
+    }
+  }
+}
+
+.progress-info {
+  margin-bottom: em(8);
+
+  div {
+    @include font(17, 1.3125, #A2A4B9, 400, 0, $segoiUI);
+  }
+}

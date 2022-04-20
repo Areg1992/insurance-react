@@ -1,0 +1,75 @@
+@import "../../assets/scss/utils/_module";
+
+aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: em(306);
+  background: #FFFFFF;
+  box-shadow: 10px 3px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 20px 0 20px 20px;
+  padding: em(30) em(50) em(33) em(53);
+}
+
+#logo {
+  display: block;
+  margin-bottom: em(16);
+
+  span {
+    @include font(16, 1.3125, $blackColor, 400, 0, $segoiUI);
+  }
+}
+
+.sidebar-menu {
+  margin-top: em(50);
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: em(26);
+    a {
+      display: inline-flex;
+      column-gap: em(25);
+
+      path {
+        will-change: fill;
+        transition: fill 0.25s;
+      }
+      span {
+        will-change: color, font-weight;
+        transition: color, font-weight 0.25s;
+        @include font(16, 1.3125, #A2A4B9, 400, 0, $segoiUI);
+      }
+      &.active {
+
+        path {
+          fill: #713BDB;
+        }
+        span {
+          font-weight: 600;
+          color: #713BDB;
+        }
+      }
+      &:hover {
+        path {
+          fill: #713BDB;
+        }
+        span {
+          color: #713BDB;
+        }
+      }
+    }
+  }
+}
+
+.aside-link {
+  display: inline-flex;
+  align-items: center;
+  column-gap: em(14);
+
+  span {
+    @include font(18, 1, #A2A4B9, 600, 0, $segoiUI);
+  }
+}

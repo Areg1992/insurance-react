@@ -1,0 +1,52 @@
+h1 {
+  margin: 0;
+  @include font(80, 1.1, currentColor, 400, 0, $segoiUI);
+}
+
+.user-title {
+  margin-top: em(8);
+  p {
+    margin: 0;
+    @include font(16, 1.3125, #888CB7, 700, 0, $segoiUI);
+  }
+}
+
+.welcome-text {
+  margin-top: em(4);
+  p {
+    margin: 0;
+    @include font(10, 1.3125, #A2A4B9, 400, 0, $segoiUI);
+  }
+}
+
+.plan-text {
+  margin-top: em(4);
+  margin-bottom: em(20);
+  p {
+    margin: 0;
+    @include font(14, 1.3125, #A2A4B9, 400, 0, $segoiUI);
+  }
+  a {
+    color: #50EDB8;
+  }
+}
+
+.code {
+  border: 1px dashed #42474A;
+  border-radius: 5px;
+  padding: em(6) em(13);
+  @include font(22, 1.3125, #42474A, 400, 0, $segoiUI);
+}
+
+.copy-code {
+  cursor: pointer;
+  @include font(22, 1.3125, #42474A, 600, 0, $segoiUI);
+}
+
+.cover-title {
+
+  p {
+    margin: 0;
+    @include font(33, 1.3125, #42474A, 600, 0, $segoiUI);
+  }
+}

@@ -1,0 +1,49 @@
+@import "../assets/scss/utils/_module";
+
+.reports {
+  max-width: em(980);
+  width: 100%;
+}
+
+.main-inside {
+  padding: em(36) em(100) em(36) em(36);
+}
+
+.cover {
+  text-align: center;
+  position: relative;
+  background: #F8F9FF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  height: em(310);
+  margin-bottom: em(20);
+
+  &-img-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+  &-img-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  &-info {
+    position: absolute;
+    right: em(70);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.code-wrapper {
+  margin-top: em(4);
+  column-gap: em(20);
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: em(20);
+}
